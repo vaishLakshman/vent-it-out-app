@@ -1,0 +1,63 @@
+"use client";
+import { useContext } from "react";
+import SimpleButton from "../UI/simpleButton";
+import { LangContext } from "../Contexts/langContext";
+import { DataContext } from "../Contexts/dataContext";
+
+//Question - 1
+export default function TheConcern() {
+  const { lang } = useContext(LangContext);
+  const { data, setData } = useContext(DataContext);
+
+  return (
+    <div className="h-screen bg-teal-100 flex items-center justify-center  text-teal-700">
+      {lang ? (
+        <div className="font-manj">
+          <div className="w-fit px-3 h-24 lg:h-28 text-center">
+            <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
+              ഈയിടെയായി നിങ്ങളുടെ മനസ്സിൽ കൂടുതലും എന്ത് ചിന്തയാണ് ?
+            </h1>
+            <h3 className="font-light w-fit px-2 text-xs lg:text-xl lg:mx-auto">
+              നിങ്ങളെ അലട്ടുന്ന സമ്മർദ്ദം, ഉത്കണ്ഠ അല്ലെങ്കിൽ മറ്റുകാരണം പറയു.
+            </h3>
+          </div>
+          <div className="question-one-container px-4 h-54 lg:h-72 lg:h-36 lg:text-2xl">
+            <textarea
+              className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
+              rows={8}
+              placeholder="നിങ്ങളുടെ വികാരങ്ങൾ ഇവിടെ പങ്കുവെക്കുക."
+              value={data.answer_1}
+              onChange={(e) => setData({ ...data, answer_1: e.target.value })}
+            />
+          </div>
+          <div className="w-fit mx-auto my-5 lg:text-2xl">
+            <SimpleButton text="അടുത്ത ചോദ്യം" next animate url="/difficulty" />
+          </div>
+        </div>
+      ) : (
+        <div className="font-lex">
+          <div className="w-fit px-3 h-16 lg:h-28 ">
+            <h1 className="w-fit mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
+              What's been on your mind a lot these days?
+            </h1>
+            <h3 className="font-light w-fit px-2 text-xs lg:text-xl lg:mx-auto">
+              Tell me about the stress, worry, or something bothering you.
+            </h3>
+          </div>
+          <div className="question-one-container  px-3 h-54 lg:h-72 lg:h-36 lg:text-2xl">
+            <textarea
+              className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
+              rows={8}
+              placeholder="Share your feelings here"
+              value={data.answer_1}
+              onChange={(e) => setData({ ...data, answer_1: e.target.value })}
+            />
+          </div>
+          <div className="w-fit mx-auto my-5 lg:text-2xl">
+            <SimpleButton text="Next" next animate url="/difficulty" />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
