@@ -44,7 +44,7 @@ export default function TheRelief() {
               bit more manageable right now?
             </h1>
             <h3 className="font-light mx-auto w-fit px-2 text-xs lg:text-xl lg:mx-auto">
-              Express your needs or hopes for change. It's okay to not have all
+              Express your needs or hopes for change. It&apos;s okay to not have all
               the answers.
             </h3>
           </div>

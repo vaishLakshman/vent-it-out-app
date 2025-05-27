@@ -40,7 +40,7 @@ export default function TheReason() {
         <div className="font-lex">
           <div className="w-fit lg:w-3/5 mx-auto px-5 lg:px-3 h-24 lg:h-36 text-center">
             <h1 className="w-fit mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
-              Has anything changed recently that's made things feel heavier or
+              Has anything changed recently that&apos;s made things feel heavier or
               different?
             </h1>
             <h3 className="font-light mx-auto w-fit px-2 text-xs lg:text-xl lg:mx-auto">

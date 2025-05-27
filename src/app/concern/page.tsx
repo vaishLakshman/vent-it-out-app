@@ -38,7 +38,7 @@ export default function TheConcern() {
         <div className="font-lex">
           <div className="w-fit px-3 h-16 lg:h-28 ">
             <h1 className="w-fit mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
-              What's been on your mind a lot these days?
+              What&apos;s been on your mind a lot these days?
             </h1>
             <h3 className="font-light w-fit px-2 text-xs lg:text-xl lg:mx-auto">
               Tell me about the stress, worry, or something bothering you.

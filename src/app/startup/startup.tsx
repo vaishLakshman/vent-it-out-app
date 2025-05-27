@@ -24,7 +24,7 @@ export default function Startup() {
         <div className="font-lex text-2xl lg:text-4xl lg:w-2/3 mx-auto leading-10 lg:leading-14  text-teal-800 mb-10 lg:mb-14">
           <h1>Hi..</h1>
           <h1>Feeling a lil blue?</h1>
-          <h1>Don't want to talk?</h1>
+          <h1>Don&apos;t want to talk?</h1>
           <h1>Let me help you..</h1>
           <h1>
             Vent out everything in your heart to me, without the fear of letting

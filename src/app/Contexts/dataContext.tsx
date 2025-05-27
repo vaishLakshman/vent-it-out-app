@@ -12,7 +12,6 @@ export const DataContext = createContext({
     answer_3: "",
     answer_4: "",
     answer_5: "",
-    response: "",
   },
   setData: (data: {
     answer_1: string;
@@ -20,7 +19,6 @@ export const DataContext = createContext({
     answer_3: string;
     answer_4: string;
     answer_5: string;
-    response: string;
   }) => {},
 });
 
@@ -31,7 +29,6 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     answer_3: "",
     answer_4: "",
     answer_5: "",
-    response: "",
   });
 
   return (

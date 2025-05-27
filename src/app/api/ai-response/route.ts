@@ -48,6 +48,7 @@ ${
         headers: { "Content-Type": "application/json" },
       }
     );
+    // eslint-disable-next-line
   } catch (error: any) {
     console.error("API error:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {

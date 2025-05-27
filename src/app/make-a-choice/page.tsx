@@ -32,9 +32,9 @@ export default function MakeAChoice() {
               I hope you feel better by taking it all off your heart.
             </h1>
             <h3 className="w-fit mx-auto mb-3 text-sm font-light lg:mb-5 text-md font-bold lg:text-2xl">
-              If you're cool with sharing your responses, I could help you out
-              by giving some perspective and maybe some suggestions on how to
-              navigate this tough times.
+              If you&apos;re cool with sharing your responses, I could help you
+              out by giving some perspective and maybe some suggestions on how
+              to navigate this tough times.
             </h3>
             <h3 className="w-fit mx-auto text-sm font-light lg:mb-3 text-md font-bold lg:text-2xl">
               If not, no worries - I hope the venting itself helped you out.

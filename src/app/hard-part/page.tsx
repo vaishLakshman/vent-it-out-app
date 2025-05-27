@@ -39,10 +39,10 @@ export default function TheHardPart() {
         <div className="font-lex">
           <div className="w-fit lg:w-4/5 mx-auto px-5 lg:px-3 h-24 lg:h-40 text-center">
             <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
-              What's the hardest part about what you're going through right now?
+              What&apos;s the hardest part about what you&apos;re going through right now?
             </h1>
             <h3 className="font-light mx-auto w-fit px-2 text-xs lg:text-xl lg:mx-auto">
-              Let's get to the core of your current emotional experience.
+              Let&apos;s get to the core of your current emotional experience.
             </h3>
           </div>
           <div className=" px-5 lg:w-2/3 mx-auto question-one-container h-54 lg:h-72 lg:h-36 lg:text-2xl">

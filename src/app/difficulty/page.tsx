@@ -40,11 +40,11 @@ export default function TheDifficulty() {
         <div className="font-lex ">
           <div className="w-fit lg:w-3/5 mx-auto px-5 lg:px-3 h-24 lg:h-36 text-center">
             <h1 className="w-fit mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
-              Is there something that's been especially hard or frustrating for
+              Is there something that&apos;s been especially hard or frustrating for
               you lately?
             </h1>
             <h3 className="font-light mx-auto w-fit px-2 text-xs lg:text-xl lg:mx-auto">
-              Any specific struggle or pattern that's making you feel low
+              Any specific struggle or pattern that&apos;s making you feel low
             </h3>
           </div>
           <div className=" px-5 lg:w-2/3 mx-auto question-one-container h-54 lg:h-72 lg:h-36 lg:text-2xl">

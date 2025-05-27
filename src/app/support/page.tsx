@@ -45,7 +45,7 @@ export default function Support() {
             Dear {user.Name ? user.Name : "Friend"},
           </h1>
           <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-            Whatever your'e going through, I just want you to know you're not
+            Whatever your&apos;e going through, I just want you to know you&apos;re not
             alone in this.
           </h1>
           <div className="w-fit mx-auto mb-14">

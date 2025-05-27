@@ -97,7 +97,7 @@ export default function MyTakes() {
                 {error ? (
                   <div className="w-fit lg:w-full mx-auto px-5 lg:px-3 h-24 lg:h-fit text-justify">
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
-                      Sorry..I can't seem to get answers.
+                      Sorry..I can&apos;t seem to get answers.
                     </h1>
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-sm font-light lg:text-4xl">
                       Could you try later?
@@ -109,7 +109,7 @@ export default function MyTakes() {
                 ) : (
                   <div className="w-fit mb-10 lg:w-full lg:mb-10 mx-auto px-7 lg:px-3 h-1/3 lg:my-24 lg:h-fit text-justify">
                     <h1 className="w-fit mx-auto mb-5 lg:mb-5 text-md font-bold lg:text-4xl">
-                      Here's what I'll say..
+                      Here&apos;s what I&apos;ll say..
                     </h1>
 
                     {aiResponse && (
