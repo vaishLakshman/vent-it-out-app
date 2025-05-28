@@ -7,6 +7,7 @@ import trouble from "../../../public/trouble.png";
 import Loader from "../Loading/Loader";
 import Image from "next/image";
 import DOMPurify from "dompurify";
+import { marked } from "marked";
 
 export default function MyTakes() {
   const { lang } = useContext(LangContext);
@@ -16,7 +17,17 @@ export default function MyTakes() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    handleSubmit();
+    if (
+      !data.answer_1.length &&
+      !data.answer_2.length &&
+      !data.answer_3.length &&
+      !data.answer_4.length &&
+      !data.answer_5.length
+    ) {
+      setError("No Data Entered");
+    } else {
+      handleSubmit();
+    }
   }, []);
 
   const sleep = (ms: number) =>
@@ -44,7 +55,7 @@ export default function MyTakes() {
   console.log("out", aiResponse);
 
   return (
-    <div className="pt-8 lg:h-screen bg-teal-100 flex items-center justify-center text-teal-700 overflow-auto pb-10 lg:pb-7">
+    <div className="pt-8 h-screen bg-teal-100 flex items-center justify-center text-teal-700 overflow-auto pb-10 lg:pb-7">
       <div className=" ">
         {loading ? (
           <div className="">
@@ -53,9 +64,9 @@ export default function MyTakes() {
         ) : (
           <div>
             {lang ? (
-              <div className="font-manj  mt-5">
+              <div className="font-manj mt-5">
                 {error ? (
-                  <div className="w-fit lg:w-full mx-auto px-5 lg:px-3 h-24 lg:h-fit text-justify">
+                  <div className="w-fit lg:w-full mx-auto px-5 lg:px-3 lg:h-fit text-justify">
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
                       എനിക്കിപ്പോ അഭിപ്രായങ്ങൾ പറയാൻ സാധിക്കുന്നില്ല
                     </h1>
@@ -85,7 +96,7 @@ export default function MyTakes() {
 
                 <div className="w-fit mx-auto my-5 lg:text-2xl">
                   <SimpleButton
-                    text="അടുത്ത ചോദ്യം"
+                    text="അടുത്തത്തിലേക് "
                     next
                     animate
                     url="/farewell"
@@ -95,7 +106,7 @@ export default function MyTakes() {
             ) : (
               <div className="font-lex mt-5">
                 {error ? (
-                  <div className="w-fit lg:w-full mx-auto px-5 lg:px-3 h-24 lg:h-fit text-justify">
+                  <div className="w-fit lg:w-full mx-auto px-5 lg:mb-16 lg:px-3 lg:h-fit text-justify">
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
                       Sorry..I can&apos;t seem to get answers.
                     </h1>

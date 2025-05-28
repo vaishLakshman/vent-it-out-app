@@ -27,7 +27,7 @@ export default function MakeAChoice() {
             </h3>
           </div>
         ) : (
-          <div className="w-fit text-xl font-lex lg:w-3/5 mx-auto px-5 lg:px-3 lg:mb-20 h-56 lg:h-fit text-center">
+          <div className="w-fit text-xl font-lex lg:w-3/5 mx-auto px-5 lg:px-3 lg:mb-10 h-72 lg:h-fit text-center">
             <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               I hope you feel better by taking it all off your heart.
             </h1>
@@ -36,10 +36,14 @@ export default function MakeAChoice() {
               out by giving some perspective and maybe some suggestions on how
               to navigate this tough times.
             </h3>
-            <h3 className="w-fit mx-auto text-sm font-light lg:mb-3 text-md font-bold lg:text-2xl">
+            <h3 className="w-fit mx-auto text-sm mb-8 font-light lg:mb-10 text-md font-bold lg:text-2xl">
               If not, no worries - I hope the venting itself helped you out.
               Just toss it into the imaginary trash bin & POOF! - it never
               happened :)
+            </h3>
+            <h3 className="w-fit mx-auto px-5 text-[10px] font-light lg:mb-3 text-md font-normal lg:text-sm">
+              *I won't save your data. It gets erased as soon as you go back to
+              home page.
             </h3>
           </div>
         )}

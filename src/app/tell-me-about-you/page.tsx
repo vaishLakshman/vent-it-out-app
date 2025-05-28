@@ -57,7 +57,7 @@ export default function GetToKnow() {
             </div> */}
           </div>
           <div className="w-fit mx-auto my-5 lg:text-2xl">
-            <SimpleButton text="തുടങ്ങാം" url="/concern" />
+            <SimpleButton text="തുടങ്ങാം" url="/q1" />
           </div>
         </div>
       ) : (
@@ -99,7 +99,7 @@ export default function GetToKnow() {
             </div> */}
           </div>
           <div className="w-fit mx-auto my-5 lg:text-2xl">
-            <SimpleButton text="Let's Begin" url="/concern" />
+            <SimpleButton text="Let's Begin" url="/q1" />
           </div>
         </div>
       )}

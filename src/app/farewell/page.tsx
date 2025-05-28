@@ -3,11 +3,24 @@ import Image from "next/image";
 import happy from "../../../public/happy.png";
 import SimpleButton from "../UI/simpleButton";
 import Footer from "../footer/footer";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LangContext } from "../Contexts/langContext";
+import { DataContext } from "../Contexts/dataContext";
 
 export default function Support() {
   const { lang } = useContext(LangContext);
+  const { setData } = useContext(DataContext);
+
+  useEffect(() => {
+    setData({
+      answer_1: "",
+      answer_2: "",
+      answer_3: "",
+      answer_4: "",
+      answer_5: "",
+    });
+  }, []);
+
   return (
     <div className="relative h-screen bg-teal-100 flex items-center justify-center text-teal-700">
       <div>
@@ -33,7 +46,7 @@ export default function Support() {
               alt="happy guys"
               height={300}
               width={300}
-              className="drop-shadow-4xl"
+              className=""
             />
           </div>
         </div>
@@ -44,15 +57,9 @@ export default function Support() {
         >
           <SimpleButton text={`${lang ? "തിരിച്ചു പോകാം" : "Home"}`} url="/" />
         </div>
-        {/* <h1 className="font-lex w-fit mx-auto opacity-50 text-xs lg:text-sm hover:opacity-75">
-          if you like my work, you can{" "}
-          <a href="" className="underline underline-offset-3 font-semibold ">
-            buy me a coffee
-          </a>
-        </h1> */}
       </div>
 
-      <Footer coffee />
+      <Footer coffee ml={lang} />
     </div>
   );
 }
