@@ -38,7 +38,7 @@ export default function MyTakes() {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      await sleep(4000);
+      await sleep(2000);
       const res = await fetch("/api/ai-response", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -105,9 +105,9 @@ export default function MyTakes() {
                 </div>
               </div>
             ) : (
-              <div className="font-lex mt-52 lg:mt-36">
+              <div className="font-lex">
                 {error ? (
-                  <div className="w-fit lg:w-full mx-auto px-5 lg:mb-16 lg:px-3 text-justify">
+                  <div className="w-fit lg:w-full mt-52 mx-auto px-5 lg:mb-16 lg:px-3 text-justify">
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
                       Sorry..I can&apos;t seem to get answers.
                     </h1>
@@ -119,7 +119,7 @@ export default function MyTakes() {
                     </div>
                   </div>
                 ) : (
-                  <div className="w-fit mb-10 lg:w-full lg:mb-10 mx-auto px-7 lg:px-3 h-1/3 lg:my-24 lg:h-fit text-justify">
+                  <div className="w-fit mb-10 mt-7 lg:w-full lg:mb-10 mx-auto px-7 lg:px-3 h-1/3 lg:my-24 lg:h-fit text-justify">
                     <h1 className="w-fit mx-auto mb-5 lg:mb-5 text-md font-bold lg:text-4xl">
                       Here&apos;s what I&apos;ll say..
                     </h1>
