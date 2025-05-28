@@ -5,34 +5,12 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: Request) {
-  const { data, lang } = await req.json();
+  const { data, lang, user } = await req.json();
 
   try {
-    //     const prompt = `
-    // The following are some questions regarding mental wellness asked to a stranger, with their corresponding answers:
-
-    // What's been on your mind a lot these days? : ${data.answer_1},
-    // Is there something that's been especially hard or frustrating for you lately? : ${
-    //       data.answer_2
-    //     },
-    // Has anything changed recently that's made things feel heavier or different? : ${
-    //       data.answer_3
-    //     },
-    // What's the hardest part about what you're going through right now?: ${
-    //       data.answer_4
-    //     }
-    // What do you think might help even a little, or make things feel a bit more manageable right now?: ${
-    //       data.answer_5
-    //     }
-
-    // Act as a friend and a therapist, and conclude the major reasons for their current scenario & also suggest some easy ways to make things right in their current scenario, in a natural tone. Don't repeat the asked questions again, rather give answers about them in listed manner. Please return the response as HTML, using <p>, <br>, <ul>, etc., so I can render it directly on a web page.
-    // ${
-    //   lang &&
-    //   "Give the answers in Malayalam. Give a fluent Malayalam translation, using natural vocabulary, polite tone, and native sentence structure."
-    // }
-    //     `;
-
-    const prompt = `You are an empathetic, insightful companion with the emotional intelligence of a seasoned therapist. I will provide you with a person’s answers to five emotionally reflective questions. Your goal is to:
+    const prompt = `You are an empathetic, insightful companion with the emotional intelligence of a seasoned therapist. I will provide you with a ${
+      user.Age
+    } year old person’s answers to five emotionally reflective questions. Your goal is to:
 1. Understand the emotional core of what the person is experiencing — what’s really going on beneath the surface.
 2. Identify any emotional patterns, beliefs, or pain points that are weighing them down.
 3. Gently reflect back their feelings in a way that helps them feel seen and understood.
@@ -76,7 +54,7 @@ ${
 Please return the response as HTML, using <p>, <br>, <ul>, etc., so I can render it directly on a web page. Makre sure it is ready to render, and no markup tags gets displayed in the rendered output.`;
 
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: prompt },

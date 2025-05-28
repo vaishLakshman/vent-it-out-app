@@ -2,16 +2,15 @@
 import { useContext } from "react";
 import SimpleButton from "../UI/simpleButton";
 import { LangContext } from "../Contexts/langContext";
-import ToggleSwitch from "../UI/toggleSwitch";
 
 export default function Startup() {
   const { lang } = useContext(LangContext);
   return (
     <div className="startup-container px-5">
       {/* TBR */}
-      <div className="absolute top-0 right-0 mt-1 mr-3 text-teal-600">
+      {/* <div className="absolute top-0 right-0 mt-1 mr-3 text-teal-600">
         <ToggleSwitch />
-      </div>
+      </div> */}
 
       {lang ? (
         <div className="font-manj text-2xl lg:text-4xl pl-2 mx-auto leading-10 lg:leading-14  text-teal-800 mb-10 lg:mb-14">
