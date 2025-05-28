@@ -40,7 +40,7 @@ export default function MakeAChoice() {
               out by giving some perspective and maybe some suggestions on how
               to navigate this tough times.
             </h3>
-            <h3 className="w-fit mx-auto text-sm mb-8 font-light lg:mb-10 text-md font-bold lg:text-2xl">
+            <h3 className="w-fit mx-auto mb-8 font-light lg:mb-10 text-md font-bold lg:text-2xl">
               If not, no worries - I hope the venting itself helped you out.
               Just toss it into the imaginary trash bin & POOF! - it never
               happened :)
