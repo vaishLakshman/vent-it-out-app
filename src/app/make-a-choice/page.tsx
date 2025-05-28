@@ -31,7 +31,7 @@ export default function MakeAChoice() {
             </h3>
           </div>
         ) : (
-          <div className="w-fit text-xl font-lex lg:w-3/5 mx-auto px-5 lg:px-3 lg:mb-10 h-72 lg:h-fit text-center">
+          <div className="w-fit text-xl font-lex lg:w-3/5 mx-auto px-5 lg:px-3 lg:mb-10 h-85 lg:h-fit text-center">
             <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               I hope you feel better by taking it all off your heart.
             </h1>

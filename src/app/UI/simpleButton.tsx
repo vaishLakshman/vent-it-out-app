@@ -7,9 +7,16 @@ export interface ButtonType {
   url?: string;
   next?: boolean;
   animate?: boolean;
+  disable?: boolean;
 }
 
-const SimpleButton = ({ text, url = "", next, animate }: ButtonType) => {
+const SimpleButton = ({
+  text,
+  url = "",
+  next,
+  animate,
+  disable,
+}: ButtonType) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(url);
@@ -18,7 +25,8 @@ const SimpleButton = ({ text, url = "", next, animate }: ButtonType) => {
     <button
       // href={url}
       onClick={handleClick}
-      className={`relative inline-flex items-center bg-teal-200 lg:bg-teal-100 px-12 py-3 overflow-hidden cursor-pointer text-inherit  text-teal-500  rounded-full hover:text-teal-600  group hover:drop-shadow-3xl `}
+      disabled={disable}
+      className={`relative inline-flex items-center ${disable ? "bg-gray-200 cursor-not-allowed text-gray-400":"bg-teal-200 lg:bg-teal-100 cursor-pointer text-teal-500 hover:text-teal-600  group hover:drop-shadow-3xl"} px-12 py-3 overflow-hidden  font-inherit  rounded-full`}
     >
       <span
         className={`relative mx-auto text-inherit  ${

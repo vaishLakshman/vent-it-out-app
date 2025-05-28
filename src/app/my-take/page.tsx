@@ -57,7 +57,7 @@ export default function MyTakes() {
 
   return (
     <div className="pt-8 h-screen bg-teal-100 flex items-center justify-center text-teal-700 overflow-auto pb-10 lg:pb-7">
-      <div className=" ">
+      <div className="h-full pb-15">
         {loading ? (
           <div className="">
             <Loader />
@@ -126,7 +126,7 @@ export default function MyTakes() {
 
                     {aiResponse && (
                       <div
-                        className="lg:w-2/3 mx-auto lg:text-lg tracking-wide"
+                        className="lg:w-2/3 mx-auto lg:text-lg tracking-wide "
                         dangerouslySetInnerHTML={{
                           __html: DOMPurify.sanitize(aiResponse),
                         }}
@@ -135,7 +135,7 @@ export default function MyTakes() {
                   </div>
                 )}
 
-                <div className="w-fit mx-auto my-5 lg:text-2xl">
+                <div className="w-fit mx-auto my-5 lg:text-2xl pb-12">
                   <SimpleButton
                     text="Closing off"
                     next

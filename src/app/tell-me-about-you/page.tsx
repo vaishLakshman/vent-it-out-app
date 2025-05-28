@@ -8,12 +8,20 @@ export default function GetToKnow() {
   const { lang } = useContext(LangContext);
   const { user, setUser } = useContext(UserContext);
   const [inputAge, setInputAge] = useState("");
+  const [inputName, setInputName] = useState("");
 
   const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const age = parseInt(e.target.value);
     setInputAge(e.target.value);
 
     if (!isNaN(age)) setUser({ ...user, Age: age });
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.value;
+    setInputName(e.target.value);
+
+    if (!inputName.length) setUser({ ...user, Name: name });
   };
 
   return (
@@ -30,8 +38,8 @@ export default function GetToKnow() {
                 className="bg-teal-50 px-2 py-2 text-teal-900"
                 type="text"
                 placeholder="രമേശ്"
-                value={user.Name}
-                onChange={(e) => setUser({ ...user, Name: e.target.value })}
+                value={inputName}
+                onChange={handleNameChange}
               />
             </div>
             <div className="flex gap-2 mb-5 items-center">
@@ -72,8 +80,8 @@ export default function GetToKnow() {
                 className="bg-teal-50 px-2 py-2 text-teal-900 w-full"
                 type="text"
                 placeholder="Suresh"
-                value={user.Name}
-                onChange={(e) => setUser({ ...user, Name: e.target.value })}
+                value={inputName}
+                onChange={handleNameChange}
               />
             </div>
             <div className="flex gap-2 mb-5 items-center">
