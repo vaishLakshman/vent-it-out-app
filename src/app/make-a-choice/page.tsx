@@ -46,8 +46,8 @@ export default function MakeAChoice() {
               happened :)
             </h3>
             <h3 className="w-fit mx-auto px-5 text-[10px] font-light lg:mb-3 text-md font-normal lg:text-sm">
-              *I won't save your data. It gets erased as soon as you go back to
-              home page.
+              *I won&apos;t save your data. It gets erased as soon as you go
+              back to home page.
             </h3>
           </div>
         )}

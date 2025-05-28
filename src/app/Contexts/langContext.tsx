@@ -7,6 +7,7 @@ interface LangProviderProps {
 
 export const LangContext = createContext({
   lang: false,
+  // eslint-disable-next-line
   setLang: (lang: boolean) => {},
 });
 

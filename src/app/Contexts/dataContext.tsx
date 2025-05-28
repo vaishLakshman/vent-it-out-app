@@ -13,6 +13,7 @@ export const DataContext = createContext({
     answer_4: "",
     answer_5: "",
   },
+  // eslint-disable-next-line
   setData: (data: {
     answer_1: string;
     answer_2: string;

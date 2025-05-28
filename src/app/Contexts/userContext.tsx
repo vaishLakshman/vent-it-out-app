@@ -7,6 +7,7 @@ interface UserProviderProps {
 
 export const UserContext = createContext({
   user: { Name: "", Age: 0 },
+  // eslint-disable-next-line
   setUser: (user: { Name: string; Age: number }) => {},
 });
 

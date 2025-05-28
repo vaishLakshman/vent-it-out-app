@@ -47,6 +47,7 @@ export default function MyTakes() {
 
       const response = await res.json();
       setAiResponse(response.output);
+      // eslint-disable-next-line
     } catch (error: any) {
       setError(error.message);
     } finally {
