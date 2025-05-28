@@ -26,34 +26,35 @@ export default function GetToKnow() {
 
   return (
     <div className="h-screen bg-teal-100 flex items-center justify-center font-lex text-teal-700 ">
-      {lang ? (
-        <div className="px-3 font-manj">
-          <h1 className="w-fit mx-auto h-20 lg:h-28 text-xl font-bold lg:text-4xl">
-            നിങ്ങളെ കൊറേശ്ശെ അറിയട്ടെ
-          </h1>
-          <div className="form-one-container h-40 lg:h-52 lg:text-2xl">
-            <div className="flex gap-2 mb-5 items-center">
-              <label className="w-22 lg:w-2/3 text-right">പേര് :</label>
-              <input
-                className="bg-teal-50 px-2 py-2 text-teal-900"
-                type="text"
-                placeholder="രമേശ്"
-                value={inputName}
-                onChange={handleNameChange}
-              />
-            </div>
-            <div className="flex gap-2 mb-5 items-center">
-              <label className="w-22 lg:w-2/3 text-right 0">വയസ്സ് :</label>
-              <input
-                className="bg-white px-2 py-2 text-teal-900"
-                type="number"
-                placeholder="20"
-                value={inputAge}
-                onChange={handleAgeChange}
-              />
-            </div>
-            {/* TBR */}
-            {/* <div className="flex gap-2 items-center">
+      <div>
+        {lang ? (
+          <div className="px-3 font-manj">
+            <h1 className="w-fit mx-auto h-20 lg:h-28 text-xl font-bold lg:text-4xl">
+              നിങ്ങളെ കൊറേശ്ശെ അറിയട്ടെ
+            </h1>
+            <div className="form-one-container h-40 lg:h-52 lg:text-2xl">
+              <div className="flex gap-2 mb-5 items-center">
+                <label className="w-22 lg:w-2/3 text-right">പേര് :</label>
+                <input
+                  className="bg-teal-50 px-2 py-2 text-teal-900"
+                  type="text"
+                  placeholder="രമേശ്"
+                  value={inputName}
+                  onChange={handleNameChange}
+                />
+              </div>
+              <div className="flex gap-2 mb-5 items-center">
+                <label className="w-22 lg:w-2/3 text-right 0">വയസ്സ് :</label>
+                <input
+                  className="bg-white px-2 py-2 text-teal-900"
+                  type="number"
+                  placeholder="20"
+                  value={inputAge}
+                  onChange={handleAgeChange}
+                />
+              </div>
+              {/* TBR */}
+              {/* <div className="flex gap-2 items-center">
               <label className="w-32 lg:w-54  text-right ">ചോദ്യങ്ങൾ :</label>
               <div className="w-full">
                 <ToggleSwitch
@@ -63,39 +64,39 @@ export default function GetToKnow() {
                 />
               </div>
             </div> */}
-          </div>
-          <div className="w-fit mx-auto my-5 lg:text-2xl">
+            </div>
+            {/* <div className="w-fit mx-auto my-5 lg:text-2xl">
             <SimpleButton text="തുടങ്ങാം" url="/q1" />
+          </div> */}
           </div>
-        </div>
-      ) : (
-        <div className="lg:px-3">
-          <h1 className="w-fit mx-auto h-20 lg:h-28 text-xl font-bold lg:text-4xl">
-            Let me barely know you
-          </h1>
-          <div className="form-one-container h-40 lg:h-52 lg:text-2xl">
-            <div className="flex gap-2 mb-5 items-center">
-              <label className="w-2/3 text-right">Your Name :</label>
-              <input
-                className="bg-teal-50 px-2 py-2 text-teal-900 w-full"
-                type="text"
-                placeholder="Suresh"
-                value={inputName}
-                onChange={handleNameChange}
-              />
-            </div>
-            <div className="flex gap-2 mb-5 items-center">
-              <label className="w-2/3 text-right">How old are you :</label>
-              <input
-                className="bg-white px-2 py-2 text-teal-900"
-                type="number"
-                placeholder="20"
-                value={inputAge}
-                onChange={handleAgeChange}
-              />
-            </div>
-            {/* TBR */}
-            {/* <div className="flex gap-2 items-center">
+        ) : (
+          <div className="lg:px-3">
+            <h1 className="w-fit mx-auto h-20 lg:h-28 text-xl font-bold lg:text-4xl">
+              Let me barely know you
+            </h1>
+            <div className="form-one-container h-40 lg:h-52 lg:text-2xl">
+              <div className="flex gap-2 mb-5 items-center">
+                <label className="w-2/3 text-right">Your Name :</label>
+                <input
+                  className="bg-teal-50 px-2 py-2 text-teal-900 w-full"
+                  type="text"
+                  placeholder="Suresh"
+                  value={inputName}
+                  onChange={handleNameChange}
+                />
+              </div>
+              <div className="flex gap-2 mb-5 items-center">
+                <label className="w-2/3 text-right">How old are you :</label>
+                <input
+                  className="bg-white px-2 py-2 text-teal-900"
+                  type="number"
+                  placeholder="20"
+                  value={inputAge}
+                  onChange={handleAgeChange}
+                />
+              </div>
+              {/* TBR */}
+              {/* <div className="flex gap-2 items-center">
               <label className="w-2/3 text-right">Questions :</label>
               <div className="w-full">
                 <ToggleSwitch
@@ -105,12 +106,14 @@ export default function GetToKnow() {
                 />
               </div>
             </div> */}
+            </div>
+            
           </div>
-          <div className="w-fit mx-auto my-5 lg:text-2xl">
-            <SimpleButton text="Let's Begin" url="/q1" />
-          </div>
-        </div>
-      )}
+        )}
+        <div className="w-fit mx-auto my-5 lg:text-2xl">
+              <SimpleButton text="Let's Begin" url="/q1" />
+            </div>
+      </div>
     </div>
   );
 }

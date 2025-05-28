@@ -13,53 +13,61 @@ export default function TheDifficulty() {
 
   return (
     <div className="h-screen bg-teal-100 flex items-center justify-center text-teal-700">
-      {lang ? (
-        <div className="font-manj lg:mx-36">
-          <div className="w-fit px-3 h-24 lg:h-36 text-center">
-            <h1 className="w-fit mx-auto mb-2 lg:mb-3 text-md font-bold lg:text-4xl">
-              {questions_Mal[1].question}
-            </h1>
-            <h3 className="font-light w-fit px-2 text-xs lg:text-xl mx-auto">
-              {questions_Mal[1].hint}
-            </h3>
+      <div>
+        {lang ? (
+          <div className="font-manj lg:mx-36">
+            <div className="w-fit px-3 h-24 lg:h-36 text-center">
+              <h1 className="w-fit mx-auto mb-2 lg:mb-3 text-md font-bold lg:text-4xl">
+                {questions_Mal[1].question}
+              </h1>
+              <h3 className="font-light w-fit px-2 text-xs lg:text-xl mx-auto">
+                {questions_Mal[1].hint}
+              </h3>
+            </div>
+            <div className=" question-one-container px-3 h-fit lg:text-2xl">
+              <textarea
+                className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
+                rows={10}
+                placeholder="നിങ്ങളുടെ വികാരങ്ങൾ ഇവിടെ പങ്കുവെക്കുക."
+                value={data.answer_2}
+                onChange={(e) => setData({ ...data, answer_2: e.target.value })}
+              />
+            </div>
           </div>
-          <div className=" question-one-container px-3 h-fit lg:text-2xl">
-            <textarea
-              className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
-              rows={10}
-              placeholder="നിങ്ങളുടെ വികാരങ്ങൾ ഇവിടെ പങ്കുവെക്കുക."
-              value={data.answer_2}
-              onChange={(e) => setData({ ...data, answer_2: e.target.value })}
-            />
+        ) : (
+          <div className="font-lex mx-4 lg:mx-36 ">
+            <div className="w-fit px-3 h-24 lg:h-40 text-center">
+              <h1 className="mx-auto mb-2 lg:mb-5 text-md font-bold lg:text-4xl">
+                {questions_Eng[1].question}
+              </h1>
+              <h3 className="font-light px-2 text-xs lg:text-xl lg:mx-auto">
+                {questions_Eng[1].hint}
+              </h3>
+            </div>
+            <div className="question-one-container px-3 h-fit lg:text-2xl">
+              <textarea
+                className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
+                rows={10}
+                placeholder="Share your feelings here"
+                value={data.answer_2}
+                onChange={(e) => setData({ ...data, answer_2: e.target.value })}
+              />
+            </div>
           </div>
-          <div className="w-fit mx-auto my-5 lg:text-2xl">
-            <SimpleButton text="അടുത്ത ചോദ്യം" next animate url="/q3" />
-          </div>
+        )}
+        <div
+          className={`w-fit mx-auto my-5 lg:text-2xl ${
+            lang ? "font-manj" : "font-lex"
+          }`}
+        >
+          <SimpleButton
+            text={lang ? "അടുത്ത ചോദ്യം" : "Next"}
+            next
+            animate
+            url="/q3"
+          />
         </div>
-      ) : (
-        <div className="font-lex lg:mx-36 ">
-          <div className="w-fit px-3 h-24 lg:h-36 text-center">
-            <h1 className="w-fit mx-auto mb-2 lg:mb-3 text-md font-bold lg:text-4xl">
-              {questions_Eng[1].question}
-            </h1>
-            <h3 className="font-light w-fit px-2 text-xs lg:text-xl mx-auto">
-              {questions_Eng[1].hint}
-            </h3>
-          </div>
-          <div className=" question-two-container px-3 h-fit lg:text-2xl">
-            <textarea
-              className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
-              rows={10}
-              placeholder="Share your feelings here"
-              value={data.answer_2}
-              onChange={(e) => setData({ ...data, answer_2: e.target.value })}
-            />
-          </div>
-          <div className="w-fit mx-auto my-5 lg:text-2xl">
-            <SimpleButton text="Next" next animate url="/q3" />
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

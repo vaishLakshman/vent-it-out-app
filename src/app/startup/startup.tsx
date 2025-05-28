@@ -21,14 +21,16 @@ export default function Startup() {
           <h1>ആരും അറിയുമെന്ന ഭയം കൂടാതെ, മനസ്സിൽ ഉള്ളതെല്ലാം പറഞ്ഞോളൂ :)</h1>
         </div>
       ) : (
-        <div className="font-lex text-2xl lg:text-4xl lg:w-2/3 mx-auto leading-10 lg:leading-14  text-teal-800 mb-10 lg:mb-14">
-          <h1>Hi..</h1>
-          <h1>Feeling a lil blue?</h1>
-          <h1>Don&apos;t want to talk?</h1>
-          <h1>Let me help you..</h1>
+        <div className="font-lex text-lg lg:text-4xl lg:w-2/3 mx-auto leading-8 lg:leading-14  text-teal-800 mb-10 lg:mb-14">
+          <h1>Hey there, feeling a little low?</h1>
+          <h1>Not ready to talk to someone about it just yet?</h1>
+          <h1>That&apos;s okay — I&apos;m here for you. </h1>
+          {/* <h1>Let me help you..</h1> */}
+          <h1>Let it all out, share whatever&apos;s on your heart.</h1>
           <h1>
-            Vent out everything in your heart to me, without the fear of letting
-            anybody know :)
+            {" "}
+            No judgment, no pressure, and no one else will know. Just a safe
+            space for you to breathe and feel a little lighter. 😊
           </h1>
         </div>
       )}

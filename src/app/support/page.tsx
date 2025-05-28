@@ -15,20 +15,20 @@ export default function Support() {
       <div className="w-fit text-xl font-manj lg:w-4/5 mx-auto px-5 lg:px-3 lg:mb-10  lg:h-fit text-center">
         {lang ? (
           <div className="font-manj">
-            <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
+            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               പ്രിയപ്പെട്ട {user.Name ? user.Name : "Friend"},
             </h1>
-            <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
+            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               നിങ്ങൾ എന്ത് ബുദ്ധിമുട്ടിലാണെങ്കിലും, നിങ്ങൾ ഒരിക്കലും
               ഒറ്റയ്ക്കല്ല എന്നോർക്കുക.
             </h1>
           </div>
         ) : (
           <div className="font-lex">
-            <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
+            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               Dear {user.Name ? user.Name : "Friend"},
             </h1>
-            <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
+            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               Whatever your&apos;e going through, I just want you to know
               you&apos;re not alone in this.
             </h1>
