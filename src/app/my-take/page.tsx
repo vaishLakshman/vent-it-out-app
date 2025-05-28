@@ -59,7 +59,7 @@ export default function MyTakes() {
     <div className="pt-8 h-screen bg-teal-100 flex items-center justify-center text-teal-700 overflow-auto pb-10 lg:pb-7">
       <div className="h-full pb-15">
         {loading ? (
-          <div className="">
+          <div className="h-full">
             <Loader />
           </div>
         ) : (
@@ -105,9 +105,9 @@ export default function MyTakes() {
                 </div>
               </div>
             ) : (
-              <div className="font-lex mt-5">
+              <div className="font-lex mt-52 lg:mt-36">
                 {error ? (
-                  <div className="w-fit lg:w-full mx-auto px-5 lg:mb-16 lg:px-3 lg:h-fit text-justify">
+                  <div className="w-fit lg:w-full mx-auto px-5 lg:mb-16 lg:px-3 text-justify">
                     <h1 className="w-fit mb-2 mx-auto lg:mb-3 text-md font-bold lg:text-4xl">
                       Sorry..I can&apos;t seem to get answers.
                     </h1>
