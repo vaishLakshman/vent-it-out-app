@@ -12,11 +12,11 @@ export default function TheConcern() {
   const { data, setData } = useContext(DataContext);
 
   return (
-    <div className="h-screen bg-teal-100 flex items-center justify-center text-teal-700">
+    <div className="h-lvh bg-teal-100 flex items-center justify-center text-teal-700">
       <div>
         {lang ? (
           <div className="font-manj mx-4 lg:mx-36">
-            <div className="w-fit px-3 h-24 lg:h-32 text-center">
+            <div className="w-fit px-3 h-28 lg:h-32 text-center">
               <h1 className="mx-auto mb-2 lg:mb-5 text-md font-bold lg:text-4xl">
                 {questions_Mal[0].question}
               </h1>
@@ -56,16 +56,15 @@ export default function TheConcern() {
           </div>
         )}
         <div
-          className={`w-fit mx-auto my-5 lg:text-2xl ${
+          className={`relative w-fit grid grid-cols-2 gap-5 px-3 mx-auto my-10 font-lex text-lg font-semibold text-center  lg:text-2xl ${
             lang ? "font-manj" : "font-lex"
           }`}
         >
           <SimpleButton
-            text={lang ? "അടുത്ത ചോദ്യം" : "Next"}
-            next
-            animate
-            url="/q2"
+            text={`${lang ? "തിരിച്ച് " : "Back"}`}
+            url="/tell-me-about-you"
           />
+          <SimpleButton text={`${lang ? "അടുത്ത ചോദ്യം" : "Next"}`} url="/q2" />
         </div>
       </div>
     </div>

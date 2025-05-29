@@ -35,7 +35,7 @@ const ToggleSwitch = ({
           className="sr-only text-teal-600"
         />
 
-        <span className="label flex items-center text-md lg:text-xl font-medium ">
+        <span className="label flex items-center text-md lg:text-xl font-medium font-lex">
           {left_label}
         </span>
         <span

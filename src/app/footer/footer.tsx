@@ -4,11 +4,11 @@ interface FooterExtra {
 }
 const Footer = ({ coffee, ml }: FooterExtra) => {
   return (
-    <div className="fixed  bottom-2 w-screen text-teal-600  justify-center hover:opacity-100">
+    <div className="fixed  bottom-2 w-screen text-teal-600 text-center  justify-center hover:opacity-100">
       {coffee && (
         <div>
           {ml ? (
-            <h1 className="font-manj w-fit mx-auto mb-4 text-xs lg:text-sm ">
+            <h1 className="font-manj w-2/3 mx-auto mb-2 text-xs lg:text-sm ">
               എന്റെ ഈ ആപ്പ് ഇഷ്ടപ്പെട്ടെങ്കിൽ, നിങ്ങൾക് എനിക്കൊരു{" "}
               <a
                 href="https://buymeacoffee.com/vaishnavlakshman"
@@ -37,11 +37,27 @@ const Footer = ({ coffee, ml }: FooterExtra) => {
         <a
           href="https://bento.me/vaish-lakshman"
           target="_blank"
-          className="font-semibold hover:underline underline-offset-2 decoration-1"
+          className="font-semibold underline underline-offset-2 decoration-1"
         >
           Vaishnav Lakshman
+          
         </a>
       </h1>
+      {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#009689"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <g fill="none" fillRule="evenodd">
+              <path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8" />
+            </g>
+          </svg> */}
     </div>
   );
 };

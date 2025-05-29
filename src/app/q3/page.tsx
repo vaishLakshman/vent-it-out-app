@@ -12,19 +12,19 @@ export default function TheReason() {
   const { data, setData } = useContext(DataContext);
 
   return (
-    <div className="h-screen bg-teal-100 flex items-center justify-center  text-teal-700">
+    <div className="h-lvh bg-teal-100 flex items-center justify-center  text-teal-700">
       <div>
         {lang ? (
-          <div className="font-manj lg:mx-36">
-            <div className="w-fit px-3 h-24 lg:h-36 text-center">
-              <h1 className="w-fit mx-auto mb-2 lg:mb-3 text-md font-bold lg:text-4xl">
+          <div className="font-manj mx-4 lg:mx-36">
+            <div className="w-fit px-3 h-28  lg:h-40 text-center">
+              <h1 className="mx-auto mb-2 lg:mb-5 text-md font-bold lg:text-4xl">
                 {questions_Mal[2].question}
               </h1>
-              <h3 className="font-light w-fit px-2 text-xs lg:text-xl mx-auto">
+              <h3 className="font-light px-2 text-xs lg:text-xl lg:mx-auto">
                 {questions_Mal[2].hint}
               </h3>
             </div>
-            <div className=" question-one-container px-3 h-fit lg:text-2xl">
+            <div className="question-one-container px-3 h-fit lg:text-2xl">
               <textarea
                 className="bg-teal-50 w-full mx-auto p-2 text-teal-900 rounded-xl"
                 rows={10}
@@ -56,16 +56,12 @@ export default function TheReason() {
           </div>
         )}
         <div
-          className={`w-fit mx-auto my-5 lg:text-2xl ${
+          className={`relative w-fit grid grid-cols-2 gap-5 px-3 mx-auto my-10 font-lex text-lg font-semibold text-center  lg:text-2xl ${
             lang ? "font-manj" : "font-lex"
           }`}
         >
-          <SimpleButton
-            text={lang ? "അടുത്തത്" : "Next"}
-            next
-            animate
-            url="/q4"
-          />
+          <SimpleButton text={`${lang ? "തിരിച്ച് " : "Back"}`} url="/q2" />
+          <SimpleButton text={`${lang ? "അടുത്ത ചോദ്യം" : "Next"}`} url="/q4" />
         </div>
       </div>
     </div>

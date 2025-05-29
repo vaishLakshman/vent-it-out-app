@@ -10,8 +10,10 @@ export default function Support() {
   const { lang } = useContext(LangContext);
   const { user } = useContext(UserContext);
 
+  
+
   return (
-    <div className="min-h-screen bg-teal-100 flex items-center justify-center  text-teal-700">
+    <div className="min-h-lvh bg-teal-100 flex items-center justify-center  text-teal-700">
       <div className="w-fit text-xl font-manj lg:w-4/5 mx-auto px-5 lg:px-3 lg:mb-10  lg:h-fit text-center">
         {lang ? (
           <div className="font-manj">

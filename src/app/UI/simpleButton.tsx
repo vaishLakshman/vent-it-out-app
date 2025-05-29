@@ -26,7 +26,11 @@ const SimpleButton = ({
       // href={url}
       onClick={handleClick}
       disabled={disable}
-      className={`relative inline-flex items-center ${disable ? "bg-gray-200 cursor-not-allowed text-gray-400":"bg-teal-200 lg:bg-teal-100 cursor-pointer text-teal-500 hover:text-teal-600  group hover:drop-shadow-3xl"} px-12 py-3 overflow-hidden  font-inherit  rounded-full`}
+      className={`relative inline-flex items-center ${
+        disable
+          ? "bg-gray-200 cursor-not-allowed text-gray-400"
+          : "bg-teal-200 lg:bg-teal-100 cursor-pointer text-teal-500 hover:text-teal-600  group hover:drop-shadow-3xl"
+      } px-12 py-3 overflow-hidden  font-inherit  rounded-full`}
     >
       <span
         className={`relative mx-auto text-inherit  ${

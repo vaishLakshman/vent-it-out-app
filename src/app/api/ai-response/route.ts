@@ -35,6 +35,8 @@ ${
 
     5.നിങ്ങൾ നിങ്ങളെ തന്നെ കുറ്റപ്പെടുത്തുന്നതും, അതിൽ നിന്ന് മോചനം ലഭിക്കാൻ ആഗ്രഹിക്കുന്നതുമായ ഒന്നുണ്ടോ?
     answer : ${data.answer_5}
+    
+    Respond in Malayalam, in a natural, emotionally expressive Malayalam tone.
     `
     : `q1. Is there something on your mind that’s been feeling heavy lately?
   answer : ${data.answer_1}

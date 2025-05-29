@@ -22,9 +22,9 @@ export default function Support() {
   }, []);
 
   return (
-    <div className="relative h-screen bg-teal-100 flex items-center justify-center text-teal-700">
+    <div className=" h-lvh bg-teal-100 flex items-center justify-center text-teal-700">
       <div>
-        <div className="w-fit text-xl mx-auto px-5 lg:px-3 lg:mb-10 text-center">
+        <div className=" text-xl mx-auto px-5 lg:px-3 lg:mb-10 text-center">
           {lang ? (
             <h1
               lang="ml"
@@ -59,7 +59,7 @@ export default function Support() {
         </div>
       </div>
 
-      <Footer coffee ml={lang} />
+      <Footer ml={lang} />
     </div>
   );
 }
