@@ -90,7 +90,7 @@ export default function MyTakes() {
                   <Error lang={lang} />
                 ) : (
                   <div className="my-8 lg:mb-10 mx-7 lg:px-3 lg:my-24 text-justify">
-                    <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-4xl">
+                    <h1 className="w-fit mx-auto mb-5 lg:mb-10 text-lg font-bold lg:text-4xl">
                       Here&apos;s what I&apos;ll say..
                     </h1>
 

@@ -28,7 +28,7 @@ const manjari = Manjari({
 
 export const metadata: Metadata = {
   title: "Vent-It-Out",
-  description: "A Wellness Project by Beisnab",
+  description: "A Wellness Project by Vaishnav Lakshman",
   icons: {
     icon: "/favicon.png",
   },
