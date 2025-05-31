@@ -5,13 +5,11 @@ import { LangContext } from "../Contexts/langContext";
 import { DataContext } from "../Contexts/dataContext";
 import Loader from "../Loading/Loader";
 import DOMPurify from "dompurify";
-import { UserContext } from "../Contexts/userContext";
 import Error from "./error";
 
 export default function MyTakes() {
   const { lang } = useContext(LangContext);
   const { data } = useContext(DataContext);
-  const { user } = useContext(UserContext);
 
   const [aiResponse, setAiResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -41,7 +39,7 @@ export default function MyTakes() {
       const res = await fetch("/api/ai-response", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data, lang, user }),
+        body: JSON.stringify({ data, lang }),
       });
 
       const response = await res.json();

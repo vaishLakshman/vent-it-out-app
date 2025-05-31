@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend, Manjari } from "next/font/google";
 import "./globals.css";
 import { DataProvider } from "./Contexts/dataContext";
-import { UserProvider } from "./Contexts/userContext";
 import { LangProvider } from "./Contexts/langContext";
 
 const geistSans = Geist({
@@ -45,9 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} ${manjari.variable} antialiased`}
       >
         <LangProvider>
-          <UserProvider>
-            <DataProvider>{children}</DataProvider>
-          </UserProvider>
+          <DataProvider>{children}</DataProvider>
         </LangProvider>
       </body>
     </html>

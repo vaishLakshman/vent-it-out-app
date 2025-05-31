@@ -3,14 +3,10 @@ import Image from "next/image";
 import hug from "../../../public/hug.png";
 import SimpleButton from "../UI/simpleButton";
 import { useContext } from "react";
-import { UserContext } from "../Contexts/userContext";
 import { LangContext } from "../Contexts/langContext";
 
 export default function Support() {
   const { lang } = useContext(LangContext);
-  const { user } = useContext(UserContext);
-
-  
 
   return (
     <div className="min-h-lvh bg-teal-100 flex items-center justify-center  text-teal-700">
@@ -18,7 +14,7 @@ export default function Support() {
         {lang ? (
           <div className="font-manj">
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-              പ്രിയപ്പെട്ട {user.Name ? user.Name : "Friend"},
+              പ്രിയപ്പെട്ട സുഹൃത്തേ
             </h1>
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               നിങ്ങൾ എന്ത് ബുദ്ധിമുട്ടിലാണെങ്കിലും, നിങ്ങൾ ഒരിക്കലും
@@ -28,7 +24,7 @@ export default function Support() {
         ) : (
           <div className="font-lex">
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-              Dear {user.Name ? user.Name : "Friend"},
+              Dear Friend,
             </h1>
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               Whatever your&apos;e going through, I just want you to know

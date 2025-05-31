@@ -6,12 +6,10 @@ import Footer from "../footer/footer";
 import { useContext, useEffect } from "react";
 import { LangContext } from "../Contexts/langContext";
 import { DataContext } from "../Contexts/dataContext";
-import { UserContext } from "../Contexts/userContext";
 
 export default function Support() {
   const { lang } = useContext(LangContext);
   const { setData } = useContext(DataContext);
-  const { setUser } = useContext(UserContext);
 
   useEffect(() => {
     setData({
@@ -20,11 +18,6 @@ export default function Support() {
       answer_3: "",
       answer_4: "",
       answer_5: "",
-    });
-
-    setUser({
-      Name: "",
-      Age: 0,
     });
   }, []);
 

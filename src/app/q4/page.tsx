@@ -36,7 +36,7 @@ export default function TheHardPart() {
           </div>
         ) : (
           <div className="font-lex mx-4 lg:mx-36">
-            <div className="w-fit px-3 h-24 lg:h-40 text-center">
+            <div className="w-fit px-3 h-32 lg:h-40 text-center">
               <h1 className="mx-auto mb-2 lg:mb-5 text-md font-bold lg:text-4xl">
                 {questions_Eng[3].question}
               </h1>
@@ -56,12 +56,15 @@ export default function TheHardPart() {
           </div>
         )}
         <div
-          className={`relative w-fit grid grid-cols-2 gap-5 px-3 mx-auto my-10 font-lex text-lg font-semibold text-center  lg:text-2xl ${
+          className={`w-fit mx-auto my-5 lg:text-2xl ${
             lang ? "font-manj" : "font-lex"
           }`}
         >
-          <SimpleButton text={`${lang ? "തിരിച്ച് " : "Back"}`} url="/q3" />
-          <SimpleButton text={`${lang ? "അടുത്ത ചോദ്യം" : "Next"}`} url="/q5" />
+          <SimpleButton
+            text={lang ? "അടുത്ത ചോദ്യം" : "Next"}
+            animate
+            url="/q5"
+          />
         </div>
       </div>
     </div>

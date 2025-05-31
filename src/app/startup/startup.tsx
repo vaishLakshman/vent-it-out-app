@@ -41,7 +41,7 @@ export default function Startup() {
       >
         <SimpleButton
           text={lang ? "തുടങ്ങാം" : "Get Started"}
-          url="/tell-me-about-you"
+          url="/disclaimer"
           next={true}
           animate
         />

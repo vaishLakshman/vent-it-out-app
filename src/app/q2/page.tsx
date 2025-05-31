@@ -56,12 +56,16 @@ export default function TheDifficulty() {
           </div>
         )}
         <div
-          className={`relative w-fit grid grid-cols-2 gap-5 px-3 mx-auto my-10 font-lex text-lg font-semibold text-center  lg:text-2xl ${
+          className={`w-fit mx-auto my-5 lg:text-2xl ${
             lang ? "font-manj" : "font-lex"
           }`}
         >
-          <SimpleButton text={`${lang ? "തിരിച്ച് " : "Back"}`} url="/q1" />
-          <SimpleButton text={`${lang ? "അടുത്ത ചോദ്യം" : "Next"}`} url="/q3" />
+          <SimpleButton
+            text={lang ? "അടുത്ത ചോദ്യം" : "Next"}
+            
+            animate
+            url="/q3"
+          />
         </div>
       </div>
     </div>

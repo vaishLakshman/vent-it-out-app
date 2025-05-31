@@ -5,12 +5,11 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: Request) {
-  const { data, lang, user } = await req.json();
+  const { data, lang } = await req.json();
 
   try {
-    const prompt = `You are an empathetic, insightful companion with the emotional intelligence of a seasoned therapist. I will provide you with a ${
-      user.Age
-    } year old person’s answers to five emotionally reflective questions. Your goal is to:
+    const prompt = `You are an empathetic, insightful companion with the emotional intelligence of a seasoned therapist. 
+    I will provide you with answers to five emotionally reflective questions. Your goal is to:
 1. Understand the emotional core of what the person is experiencing — what’s really going on beneath the surface.
 2. Identify any emotional patterns, beliefs, or pain points that are weighing them down.
 3. Gently reflect back their feelings in a way that helps them feel seen and understood.
