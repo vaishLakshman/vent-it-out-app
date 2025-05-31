@@ -32,10 +32,10 @@ export default function MakeAChoice() {
           </div>
         ) : (
           <div className="w-fit text-xl font-lex lg:w-3/5 mx-auto px-5 lg:px-3 mb-10 h-fit text-center">
-            <h3 className="w-fit mx-auto mb-3 lg:mb-5 text-lg lg:text-2xl">
+            <h3 className="w-fit mx-auto mb-3 lg:mb-5 text-lg lg:text-3xl">
               Vent your thoughts without worry - your data is never stored
             </h3>
-            <h3 className="w-fit mx-auto mb-3 lg:mb-5 text-lg lg:text-2xl">
+            <h3 className="w-fit mx-auto mb-3 lg:mb-5 text-lg lg:text-3xl">
               Your responses stay only till the end, where you can either get
               some suggestions or toss them and move on with a lighter heart.
               💬✨
