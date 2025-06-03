@@ -24,7 +24,7 @@ export default function Support() {
         ) : (
           <div className="font-lex">
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-              Dear Friend,
+              Hey there,
             </h1>
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
               Whatever your&apos;e going through, I just want you to know
