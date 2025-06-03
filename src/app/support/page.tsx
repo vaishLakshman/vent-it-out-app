@@ -24,11 +24,11 @@ export default function Support() {
         ) : (
           <div className="font-lex">
             <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-              Hey there,
+              Hey buddy,
             </h1>
-            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl">
-              Whatever your&apos;e going through, I just want you to know
-              you&apos;re not alone in this.
+            <h1 className=" mx-auto mb-5 lg:mb-10 text-md font-bold lg:text-5xl lg:leading-15">
+              Whatever your&apos;e going through, I want you to know you&apos;re
+              not alone in this.
             </h1>
           </div>
         )}
